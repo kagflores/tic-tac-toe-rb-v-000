@@ -44,7 +44,7 @@ def turn (board)
   user_choice = gets.strip
   index = input_to_index(user_choice)
   if valid_move?(board, index)
-    turn_count(board)
+    current_player(board)
     move(board, index, "X")
     display_board(board)
   else
@@ -127,8 +127,8 @@ end
 def play(board)
   while over?(board) == false
     turn(board)
-    won?(board)
-    draw?(board)
+    #won?(board)
+    #draw?(board)
   end
   if won?(board)
     puts "Congratulations #{winner(board)}!"
