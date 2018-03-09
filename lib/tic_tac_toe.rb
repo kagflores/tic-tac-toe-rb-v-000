@@ -124,9 +124,9 @@ def winner(board)
 end
 
 def play(board)
-  while won?(board) == false && draw?(board) == false
+  while over?(board) == false
     turn(board)
-    until over?(board)
+    #until over?(board)
   end
   if won?(board)
     puts "Congratulations #{winner(board)}!"
