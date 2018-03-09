@@ -128,7 +128,6 @@ def play(board)
     turn(board)
     #until over?(board)
     if over?(board)
-      break
     end
   end
   if won?(board)
